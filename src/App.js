@@ -8,7 +8,6 @@ import PrivateRoute from './components/common/routes/PrivateRoute';
 import Loader from './components/common/Loader';
 
 const LoginPage = lazy(() => import('./pages/Login'));
-const ForgotPassword = lazy(() => import('./pages/ForgotPassword'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const Home = lazy(() => import('./pages/Home'));
 
@@ -22,15 +21,6 @@ const App = () => (
           element={
             <PublicRoute>
               <LoginPage />
-            </PublicRoute>
-          }
-        />
-        <Route
-          exact
-          path="/forgot-password"
-          element={
-            <PublicRoute>
-              <ForgotPassword />
             </PublicRoute>
           }
         />

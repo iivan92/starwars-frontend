@@ -9,20 +9,16 @@ export default async (options) => {
   const source = CancelToken.source();
   let waiting = true;
 
-  const finalUrl = `/realish/${options.url}`;
+  const finalUrl = `/api/${options.url}`;
 
   const request = {
     url: finalUrl,
     cancelToken: source.token,
     headers: {
-      'Content-Type': options.hasFiles
-        ? 'application/x-www-form-urlencoded'
-        : 'application/json',
+      'Content-Type': 'application/json',
     },
     ...(options.method ? { method: options.method } : {}),
-    ...(options.body
-      ? { data: options.hasFiles ? options.body : JSON.stringify(options.body) }
-      : {}),
+    ...(options.body ? { data: JSON.stringify(options.body) } : {}),
   };
 
   let timeout;

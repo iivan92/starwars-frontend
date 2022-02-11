@@ -21,13 +21,3 @@ export const loginUser = async (email, password) =>
       password,
     },
   });
-
-export const verifyUser = async (email, code) =>
-  api({
-    method: 'post',
-    url: 'auth/verify',
-    body: {
-      email,
-      code,
-    },
-  });
