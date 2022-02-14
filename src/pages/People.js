@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/App.css';
 import logo from '../resources/images/logo.svg';
 
-const NotFound = () => (
+const People = () => (
   <div className="App">
     <header className="App-header">
       <Link to="/">
@@ -17,4 +17,4 @@ const NotFound = () => (
   </div>
 );
 
-export default NotFound;
+export default People;
