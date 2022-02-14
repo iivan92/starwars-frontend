@@ -1,8 +1,8 @@
 import { Navigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { setLogin } from '../../../store/userSlice';
-import { isLogged } from '../../../utils/localStorage';
+import { setLogin } from '../../store/userSlice';
+import { isLogged } from '../../utils/localStorage';
 
 const PublicRoute = ({ children }) => {
   const dispatch = useDispatch();

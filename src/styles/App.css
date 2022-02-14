@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,40 +41,9 @@
   cursor: pointer;
 }
 
-form {
+main {
+  height: 90vmin;
   display: flex;
-  flex-direction: column;
-  width: 40%;
-  margin: 20px 0;
-}
-
-form label {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
-}
-
-form input {
-  width: 50%;
-}
-
-form button {
-  padding: 10px 60px;
-  border-style: none;
-  border-color: #000;
-  border-radius: 5px;
-  background-color: #0087cb;
-  color: #fff;
-  cursor: pointer;
-}
-
-.msg-error {
-  font-size: 14px;
-  color: red;
-}
-
-.msg-logged {
-  font-size: 14px;
-  color: white;
+  align-items: center;
+  justify-content: center;
 }
