@@ -10,6 +10,9 @@ import Loader from './components/Loader';
 const LoginPage = lazy(() => import('./pages/Login/Login'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const Home = lazy(() => import('./pages/Home/Home'));
+const People = lazy(() => import('./pages/People'));
+const Planets = lazy(() => import('./pages/Planets'));
+const Starships = lazy(() => import('./pages/Starships'));
 
 const App = () => (
   <Router>
@@ -34,6 +37,34 @@ const App = () => (
           }
         />
         <Route exact path="*" element={<NotFound />} />
+
+        <Route
+          exact
+          path="/people"
+          element={
+            <PrivateRoute>
+              <People />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          exact
+          path="/planets"
+          element={
+            <PrivateRoute>
+              <Planets />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          exact
+          path="/starships"
+          element={
+            <PrivateRoute>
+              <Starships />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </Suspense>
   </Router>
