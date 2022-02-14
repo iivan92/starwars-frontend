@@ -1,6 +1,7 @@
 /* eslint-disable no-param-reassign */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { loginUser, registerUser } from '../services/user';
+import { login } from '../utils/localStorage';
 
 const initialState = {
   isLogged: false,
@@ -13,7 +14,7 @@ export const registerUserAsync = createAsyncThunk(
   'user/registerUser',
   async ({ email, password }) => {
     const response = await registerUser(email, password);
-    return response.data;
+    return response;
   }
 );
 
@@ -21,14 +22,18 @@ export const loginUserAsync = createAsyncThunk(
   'user/loginUser',
   async ({ email, password }) => {
     const response = await loginUser(email, password);
-    return response.data;
+    return response;
   }
 );
 
 export const userSlice = createSlice({
   name: 'user',
   initialState,
-  reducers: {},
+  reducers: {
+    setLogin(state) {
+      state.isLogged = true;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(registerUserAsync.pending, (state) => {
@@ -56,6 +61,7 @@ export const userSlice = createSlice({
         state.isLogged = true;
         state.response = action.payload;
         state.error = null;
+        login(action.payload.token);
       })
       .addCase(loginUserAsync.rejected, (state, action) => {
         state.status = 'idle';
@@ -66,6 +72,7 @@ export const userSlice = createSlice({
   },
 });
 
+export const { setLogin } = userSlice.actions;
 export const isLogged = (state) => state.user.isLogged;
 
 export default userSlice.reducer;

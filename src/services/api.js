@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { getToken } from '../utils/localStorage';
 
 const TIMEOUT_MIN = 1;
 const TIMEOUT_REQUEST = 1000 * 60 * TIMEOUT_MIN;
@@ -11,12 +12,18 @@ export default async (options) => {
 
   const finalUrl = `/api/${options.url}`;
 
+  const headers = {
+    'Content-Type': 'application/json',
+  };
+  const token = getToken();
+  if (token) {
+    headers['x-access-token'] = token;
+  }
+
   const request = {
     url: finalUrl,
     cancelToken: source.token,
-    headers: {
-      'Content-Type': 'application/json',
-    },
+    headers,
     ...(options.method ? { method: options.method } : {}),
     ...(options.body ? { data: JSON.stringify(options.body) } : {}),
   };
