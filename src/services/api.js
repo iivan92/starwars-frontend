@@ -4,13 +4,16 @@ import { getToken } from '../utils/localStorage';
 const TIMEOUT_MIN = 1;
 const TIMEOUT_REQUEST = 1000 * 60 * TIMEOUT_MIN;
 
+const API_URL = `/api`;
+
 export default async (options) => {
   let response = {};
   const { CancelToken } = axios;
   const source = CancelToken.source();
   let waiting = true;
 
-  const finalUrl = `/api/${options.url}`;
+  const BASE_URL = process.env.REACT_APP_BACK_URL + API_URL;
+  const finalUrl = `${BASE_URL}/${options.url}`;
 
   const headers = {
     'Content-Type': 'application/json',
