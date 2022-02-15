@@ -33,7 +33,7 @@ const Planets = () => {
         {status === 'loading' ? (
           <img src={logo} className="App-logo" alt="logo" />
         ) : (
-          <section>
+          <section className="list-cards">
             {planets.map((element) => (
               <CardPlanet key={`card-${element.name}`} {...element} />
             ))}

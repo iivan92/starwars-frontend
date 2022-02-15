@@ -55,8 +55,12 @@
 }
 
 main {
-  height: 85vmin;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+main section.list-cards {
+  display: flex;
+  flex-wrap: wrap;
 }

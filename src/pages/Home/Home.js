@@ -18,16 +18,19 @@ const Home = () => (
         <Link to="/people">
           <Button>
             <img src={people} className="People" alt="logo" height="50px" />
+            People
           </Button>
         </Link>
         <Link to="/planets">
           <Button>
             <img src={planet} className="Planet" alt="logo" height="50px" />
+            Planets
           </Button>
         </Link>
         <Link to="/starships">
           <Button>
             <img src={starship} className="Starship" alt="logo" height="50px" />
+            Starships
           </Button>
         </Link>
       </section>

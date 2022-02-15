@@ -33,7 +33,7 @@ const Starships = () => {
         {status === 'loading' ? (
           <img src={logo} className="App-logo" alt="logo" />
         ) : (
-          <section>
+          <section className="list-cards">
             {starships.map((element) => (
               <CardStarship key={`card-${element.name}`} {...element} />
             ))}

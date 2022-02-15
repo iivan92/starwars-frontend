@@ -33,7 +33,7 @@ const People = () => {
         {status === 'loading' ? (
           <img src={logo} className="App-logo" alt="logo" />
         ) : (
-          <section>
+          <section className="list-cards">
             {people.map((element) => (
               <CardPerson key={`card-${element.name}`} {...element} />
             ))}

@@ -5,7 +5,7 @@ import './Card.styles.css';
 import starship from '../../resources/images/starship.png';
 
 const CardStarship = ({ name, starship_class, manufacturer }) => (
-  <article>
+  <article className="Card">
     <img src={starship} alt="card-people" height="50px" />
     <p>Name: {name}</p>
     <p>Starship class: {starship_class}</p>
