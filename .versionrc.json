@@ -1,0 +1,43 @@
+{
+  "header": "Changelog",
+  "types": [
+    {
+      "type": "feat",
+      "section": "Features"
+    },
+    {
+      "type": "fix",
+      "section": "Bug Fixes"
+    },
+    {
+      "type": "chore",
+      "hidden": true
+    },
+    {
+      "type": "docs",
+      "section": "Docs"
+    },
+    {
+      "type": "style",
+      "hidden": true
+    },
+    {
+      "type": "refactor",
+      "section": "Refactor"
+    },
+    {
+      "type": "perf",
+      "hidden": true
+    },
+    {
+      "type": "test",
+      "hidden": true
+    }
+  ],
+  "commitUrlFormat": "https://github.com/siliconJaviererro/realish_backend/commit/{{hash}}",
+  "compareUrlFormat": "https://github.com/siliconJaviererro/realish_backend/compare/{{previousTag}}...{{currentTag}}",
+  "issuePrefixes": [
+    "#"
+  ],
+  "issueUrlFormat": "https://github.com/siliconJaviererro/realish_backend/issues/{{id}}"
+}

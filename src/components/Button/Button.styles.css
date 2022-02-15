@@ -1,0 +1,9 @@
+.Button {
+  cursor: pointer;
+  width: 90px;
+  height: 80px;
+}
+
+.Button:hover {
+  transform: translateY(-3px);
+}
