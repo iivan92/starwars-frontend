@@ -1,4 +1,11 @@
 Changelog
+### [0.0.3](https://github.com/siliconJaviererro/realish_backend/compare/v0.0.2...v0.0.3) (2022-02-15)
+
+
+### Bug Fixes
+
+* remove api proxy and use directly the heroku url with env files ([653e590](https://github.com/siliconJaviererro/realish_backend/commit/653e5908ed3f2fe1f4603ba58914c879289d736d))
+
 ### 0.0.2 (2022-02-15)
 
 
