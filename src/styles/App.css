@@ -9,19 +9,32 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 5s linear;
   }
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-header a {
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 14px;
+}
+
+.App-header a:hover {
+  font-weight: bold;
 }
 
 .App-link {
@@ -41,40 +54,13 @@
   cursor: pointer;
 }
 
-form {
+main {
   display: flex;
-  flex-direction: column;
-  width: 40%;
-  margin: 20px 0;
+  align-items: center;
+  justify-content: center;
 }
 
-form label {
-  width: 100%;
+main section.list-cards {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
-}
-
-form input {
-  width: 50%;
-}
-
-form button {
-  padding: 10px 60px;
-  border-style: none;
-  border-color: #000;
-  border-radius: 5px;
-  background-color: #0087cb;
-  color: #fff;
-  cursor: pointer;
-}
-
-.msg-error {
-  font-size: 14px;
-  color: red;
-}
-
-.msg-logged {
-  font-size: 14px;
-  color: white;
+  flex-wrap: wrap;
 }

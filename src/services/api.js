@@ -40,7 +40,11 @@ export default async (options) => {
   } catch (err) {
     waiting = false;
     if (timeout) clearTimeout(timeout);
-    if (err.message) {
+
+    if (err.response?.status === 401) {
+      const error = { redirect: true };
+      throw error;
+    } else if (err.message) {
       const error = { message: err.message };
       throw error;
     } else {

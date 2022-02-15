@@ -1,7 +1,7 @@
 import { Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { isLogged } from '../../../utils/localStorage';
-import { setLogin } from '../../../store/userSlice';
+import { isLogged } from '../../utils/localStorage';
+import { setLogin } from '../../store/userSlice';
 
 const PrivateRoute = ({ children }) => {
   const dispatch = useDispatch();
